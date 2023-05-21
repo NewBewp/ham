@@ -73,8 +73,48 @@ function bai2() {
             (kwConsump - 200) * d +
             (kwConsump - 350) * e;
     }
-    document.getElementById("name").innerHTML = "Tên: " + userName + " |" ;
-    document.getElementById("result2").innerHTML = "Tiền điện: " + total;
+    document.getElementById("name").innerHTML = "Tên: " + userName + " |";
+    document.getElementById("result2").innerHTML = " Tiền điện: " + total;
 }
 document.getElementById("btn2").onclick = bai2;
 
+/////////////////////////////////////////////////////////////////
+
+// BÀI 3
+
+function taxCalculation(yearIncomeInput) {
+    let taxPay = 0;
+    if (yearIncomeInput <= 60e+6) {
+        taxPay = 0.05
+    } else if (yearIncomeInput <= 120e+6) {
+        taxPay = 0.1
+    } else if (yearIncomeInput <= 210e+6) {
+        taxPay = 0.15
+    } else if (yearIncomeInput <= 384e+6) {
+        taxPay = 0.2
+    } else if (yearIncomeInput <= 624e+6) {
+        taxPay = 0.25
+    } else if (yearIncomeInput <= 960e+6) {
+        taxPay = 0.3
+    } else {
+        taxPay = 0.35
+    }
+    return taxPay;
+}
+
+function bai3() {
+    var userName = document.getElementById("nameUser3").value;
+    var income = +document.getElementById("yearIncomeInput").value;
+    var dependents = +document.getElementById("dependentsInput").value;
+
+    var tax = taxCalculation(yearIncomeInput);
+
+    var total;
+
+    total = income * tax - dependents * 16e+5;
+
+    document.getElementById("name3").innerHTML = "Tên: " + userName + " |";
+    document.getElementById("result3").innerHTML = " Tiền thuế thu nhập cá nhân: " + Intl.NumberFormat('vn-VN',).format(total);
+    // Intl.NumberFormat('vn-VN',).format(total);
+}
+document.getElementById("btn3").onclick = bai3;

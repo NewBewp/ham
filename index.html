@@ -91,7 +91,8 @@
                         </div>
                         <button class="mt-3" type="submit" id="btn2">Tính tiền điện</button>
                         <p class="border mt-3">👉<span id="name"></span>
-                            <span id="result2"></span></p>
+                            <span id="result2"></span>
+                        </p>
 
                         <div class="model3">
                             <h5>Mô hình 3 khối</h5>
@@ -102,8 +103,9 @@
                             </ul>
                             <h6>Xử lý: </h6>
                             <ul>
-                                <li>Tạo biến và gán giá trị tiền cho các quy tắc</li> 
-                                <li>50kw đầu tính theo 500vnd/kw, nếu hơn tính (số người dùng nhập trừ đi 50kw đã tính)</li>
+                                <li>Tạo biến và gán giá trị tiền cho các quy tắc</li>
+                                <li>50kw đầu tính theo 500vnd/kw, nếu hơn tính (số người dùng nhập trừ đi 50kw đã tính)
+                                </li>
                             </ul>
                             <h6>Output: </h6>
                             <ul>
@@ -113,10 +115,46 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                         aria-labelledby="v-pills-messages-tab">
-                        Messages</div>
+                        <!-- BÀI 3 -->
+                        <h5>💰 Tính thuế thu nhập cá nhân</h5>
+                        <div class="content">
+                            <input type="text" placeholder="Họ tên" id="nameUser3">
+                            <input type="number" placeholder="Tổng thu nhập năm" id="yearIncomeInput">
+                            <input type="number" placeholder="Số người phụ thuộc" id="dependentsInput">
+                        </div>
+                        <button class="mt-3" type="submit" id="btn3">Tính tiền thuế</button>
+                        <p class="border mt-3">👉
+                            <span id="name3"></span>
+                            <span id="result3"></span>
+                        </p>
+                        <div class="model3">
+                            <h5>Mô hình 3 khối</h5>
+                            <h6>Input: </h6>
+                            <ul>
+                                <li>Tên người dùng</li>
+                                <li>Tổng thu nhập cả năm</li>
+                                <li>Số người phụ thuộc</li>
+                            </ul>
+                            <h6>Xử lý: </h6>
+                            <ul>
+                                <li>Doom đến các input id </li>
+                                <li>tạo function tính thuế </li>
+                                <li>gọi lại function và tính vào bài toán</li>
+                            </ul>
+                            <h6>Output: </h6>
+                            <ul>
+                                <li>Xuất ra tên người dùng và số tiền thuế phải đóng</li>
+                            </ul>
+                        </div>
+
+                    </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                         aria-labelledby="v-pills-settings-tab">
-                        Settings</div>
+                        <h5>🕸️ Tính tiền cáp</h5>
+                        <select name="" id="customerType">
+                            <option value="1"></option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
