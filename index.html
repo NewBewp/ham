@@ -54,40 +54,63 @@
                             <input class="col-3 mt-3" type="text" id="pointC" placeholder="Điểm môn C">
                         </div>
                         <button class="mt-3" type="submit" id="btn1">Kết quả</button>
-
                         <p class="border mt-3">👉<span id="result1"></span></p>
-
-                        <h5>Mô hình 3 khối</h5>
-
-                        <h6>Input: </h6>
-                        <ul>
-                            <li>Điểm chuẩn (id="marksPointInput")</li>
-                            <li>Khu vực (id="areaInput")</li>
-                            <li>Đối tượng (id="typeInput")</li>
-                            <li>Điểm của cả 3 môn (id="pointA",id="pointB",id="pointC")</li>
-                        </ul>
-                        <h6>Xử lý: </h6>
-                        <ul>
-                            <li>Tạo 2 funtion xử lý điểm cho khu vực và đối tượng</li>
-                            <li>DOOM đến điểm chuẩn, khu vực, đối tượng, điểm 3 môn để lấy giá trị người dùng chọn hoặc nhập vào</li>  
-                            <li>Gọi lại 2 funtion xử lý gán giá trị vào areaPoint và typePoint</li>
-                            <li>Tính tổng điểm của toàn bộ 3 môn + điểm khu vực + điểm đối tượng</li>
-                            
-                            <li>so sánh điểm tổng với điểm chuẩn để biết đậu hay rớt</li>     
-                        </ul>
-                        <h6>Output: </h6>
-                        <ul>
-                            <li>so sánh điểm tổng với điểm chuẩn để biết đậu hay rớt</li>
-                            <li>Nếu tổng điểm nhỏ hơn điểm chuẩn hoặc có 1 trong 3 môn 0 điểm thì rớt </li>
-                        </ul>
-
-
-
-
+                        <div class="model3">
+                            <h5>Mô hình 3 khối</h5>
+                            <h6>Input: </h6>
+                            <ul>
+                                <li>Điểm chuẩn (id="marksPointInput")</li>
+                                <li>Khu vực (id="areaInput")</li>
+                                <li>Đối tượng (id="typeInput")</li>
+                                <li>Điểm của cả 3 môn (id="pointA",id="pointB",id="pointC")</li>
+                            </ul>
+                            <h6>Xử lý: </h6>
+                            <ul>
+                                <li>Tạo 2 funtion xử lý điểm cho khu vực và đối tượng</li>
+                                <li>DOOM đến điểm chuẩn, khu vực, đối tượng, điểm 3 môn để lấy giá trị người dùng chọn
+                                    hoặc
+                                    nhập vào</li>
+                                <li>Gọi lại 2 funtion xử lý gán giá trị vào areaPoint và typePoint</li>
+                                <li>Tính tổng điểm của toàn bộ 3 môn + điểm khu vực + điểm đối tượng</li>
+                                <li>so sánh điểm tổng với điểm chuẩn để biết đậu hay rớt</li>
+                                <li>Nếu tổng điểm nhỏ hơn điểm chuẩn hoặc có 1 trong 3 môn 0 điểm thì rớt </li>
+                            </ul>
+                            <h6>Output: </h6>
+                            <ul>
+                                <li>Đưa ra điểm và kết quả đậu hoặc rớt</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                         aria-labelledby="v-pills-profile-tab">
-                        Profile</div>
+                        <!-- BÀI 2 -->
+                        <h5>🔋 Tính tiền điện</h5>
+                        <div class="content">
+                            <input type="text" placeholder="Họ tên" id="nameUser">
+                            <input type="text" placeholder="Nhập số kw" id="kwInput">
+                        </div>
+                        <button class="mt-3" type="submit" id="btn2">Tính tiền điện</button>
+                        <p class="border mt-3">👉<span id="name"></span>
+                            <span id="result2"></span></p>
+
+                        <div class="model3">
+                            <h5>Mô hình 3 khối</h5>
+                            <h6>Input: </h6>
+                            <ul>
+                                <li>Tên người dùng</li>
+                                <li>Số kw điện tiêu thụ</li>
+                            </ul>
+                            <h6>Xử lý: </h6>
+                            <ul>
+                                <li>Tạo biến và gán giá trị tiền cho các quy tắc</li> 
+                                <li>50kw đầu tính theo 500vnd/kw, nếu hơn tính (số người dùng nhập trừ đi 50kw đã tính)</li>
+                            </ul>
+                            <h6>Output: </h6>
+                            <ul>
+                                <li>xuất ra tên người dùng và giá tiền điện</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                         aria-labelledby="v-pills-messages-tab">
                         Messages</div>

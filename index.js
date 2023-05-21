@@ -44,3 +44,37 @@ function bai1() {
     }
 }
 document.getElementById("btn1").onclick = bai1;
+
+///////////////////////////////////////////////////////////////////////
+
+// BÀI 2
+function bai2() {
+    var userName = document.getElementById("nameUser").value;
+    var kwConsump = document.getElementById("kwInput").value;
+    var total;
+    var a = 500; //50kw đầu
+    var b = 650; //50kw kế
+    var c = 850; //100kw kế
+    var d = 1100; //150kw kế
+    var e = 1300; //còn lại
+
+    if (kwConsump <= 50) {
+        total = kwConsump * a;
+    } else if (kwConsump <= 100) {
+        total = kwConsump * a + (kwConsump - 50) * b;
+    } else if (kwConsump <= 200) {
+        total = kwConsump * a + (kwConsump - 50) * b + (kwConsump - 100) * c;
+    } else if (kwConsump <= 350) {
+        total = kwConsump * a + (kwConsump - 50) * b + (kwConsump - 100) * c + (kwConsump - 200);
+    } else {
+        total = kwConsump * a +
+            (kwConsump - 50) * b +
+            (kwConsump - 100) * c +
+            (kwConsump - 200) * d +
+            (kwConsump - 350) * e;
+    }
+    document.getElementById("name").innerHTML = "Tên: " + userName + " |" ;
+    document.getElementById("result2").innerHTML = "Tiền điện: " + total;
+}
+document.getElementById("btn2").onclick = bai2;
+
