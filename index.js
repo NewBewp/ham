@@ -156,6 +156,5 @@ function bai4() {
     document.getElementById("result4").innerHTML = "Tiền cáp " +
         Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USA' }).format(total);
 }
-
 document.getElementById("btn4").onclick = bai4;
 
